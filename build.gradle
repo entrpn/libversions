@@ -1,0 +1,24 @@
+group 'entrpn-tools'
+version '1.00.00-b1'
+
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.10'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile gradleApi()
+    compile localGroovy()
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('repo'))
+        }
+    }
+}

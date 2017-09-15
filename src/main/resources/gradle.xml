@@ -1,0 +1,42 @@
+<templateSet group="gradle">
+  <template name="gradle_data_binding" value="apply plugin: 'kotlin-kapt'&#10;&#10;// inside android{} tags&#10;dataBinding {&#10;        enabled = true&#10;    }&#10;    &#10;// Inside your module depedencies tag. Has to match gradle plugin version (found inside the project build.gradle file).&#10;kapt dataBindingCompiler" description="Add data binding to gradle" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="gradle_firebase_messaging" value="compile firebaseDependencies.messaging" description="Add FirebaseMessaging dependency" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="gradle_support_appcompat" value="compile supportDependencies.appCompat" description="Add Appcompat dependency" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="gradle_support_design" value="compile supportDependencies.design" description="Add Design dependency" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="gradle_support_constraintLayout" value="compile supportDependencies.constraintLayout" description="Add ConstraintLayout dependency" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="gradle_support_cardView" value="compile supportDependencies.cardView" description="Add CardView dependency" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="gradle_support_room" value="apply plugin: 'kotlin-kapt'&#10;// Inside your module depedencies tag.&#10;compile roomDependencies.roomRuntime&#10;kapt roomDependencies.roomCompiler" description="Add Room dependencies" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="gradle_lifecycle" value="apply plugin: 'kotlin-kapt'&#10;// Inside your module depedencies tag.&#10;compile lifecycleDependencies.lifecycleRuntime&#10;compile lifecycleDependencies.lifecycleExtensions&#10;kapt lifecycleDependencies.lifecycleCompiler" description="Add Lifecycle and ViewModel dependencies" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+</templateSet>
